@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Flight Reservation</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>Flight Reservation System</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Book Your Flight</h2>
+      <form id="reservation-form">
+        <input type="text" id="passenger-name" placeholder="Passenger Name" required/>
+        <input type="email" id="email" placeholder="Email" required/>
+        <input type="date" id="departure-date" required/>
+        <select id="from-city" required>
+          <option value="">From</option>
+          <option value="New York">New York</option>
+          <option value="London">London</option>
+          <option value="Paris">Paris</option>
+        </select>
+        <select id="to-city" required>
+          <option value="">To</option>
+          <option value="Tokyo">Tokyo</option>
+          <option value="Dubai">Dubai</option>
+          <option value="Sydney">Sydney</option>
+        </select>
+        <select id="class" required>
+          <option value="">Select Class</option>
+          <option value="Economy">Economy</option>
+          <option value="Business">Business</option>
+          <option value="First">First</option>
+        </select>
+        <button type="submit">Book Flight</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Booked Flights</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Passenger</th><th>Email</th><th>Departure</th><th>From</th><th>To</th><th>Class</th>
+          </tr>
+        </thead>
+        <tbody id="reservation-list">
+          <!-- Reservations will appear here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
