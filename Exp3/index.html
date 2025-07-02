@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Bus Ticket Booking</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Bus Ticket Booking</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Book Your Ticket</h2>
+      <form id="ticket-form">
+        <input type="text" id="passenger-name" placeholder="Passenger Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="date" id="travel-date" required />
+        <select id="origin" required>
+          <option value="">From</option>
+          <option value="New York">New York</option>
+          <option value="Chicago">Chicago</option>
+          <option value="Los Angeles">Los Angeles</option>
+        </select>
+        <select id="destination" required>
+          <option value="">To</option>
+          <option value="San Francisco">San Francisco</option>
+          <option value="Seattle">Seattle</option>
+          <option value="Miami">Miami</option>
+        </select>
+        <button type="submit">Book Ticket</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Booked Tickets</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Passenger</th><th>Email</th><th>Date</th><th>From</th><th>To</th>
+          </tr>
+        </thead>
+        <tbody id="ticket-list">
+          <!-- Booked tickets appear here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
