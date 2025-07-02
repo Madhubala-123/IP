@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Train Reservation</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>Train Reservation System</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Reserve a Ticket</h2>
+      <form id="reservation-form">
+        <input type="text" id="passenger-name" placeholder="Passenger Name" required/>
+        <input type="email" id="email" placeholder="Email" required/>
+        <input type="date" id="travel-date" required/>
+        <select id="train" required>
+          <option value="">Select Train</option>
+          <option value="Express 101">Express 101</option>
+          <option value="Superfast 202">Superfast 202</option>
+          <option value="Intercity 303">Intercity 303</option>
+        </select>
+        <select id="class" required>
+          <option value="">Select Class</option>
+          <option value="Sleeper">Sleeper</option>
+          <option value="AC 2-Tier">AC 2-Tier</option>
+          <option value="AC 3-Tier">AC 3-Tier</option>
+        </select>
+        <button type="submit">Book Ticket</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Booked Tickets</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Passenger</th><th>Email</th><th>Date</th><th>Train</th><th>Class</th>
+          </tr>
+        </thead>
+        <tbody id="reservation-list">
+          <!-- Reservations will appear here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
